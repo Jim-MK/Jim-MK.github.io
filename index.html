@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/js/" style="font-size: 10px;">js</a>
 					</div>
 				</section>
 				
@@ -196,11 +196,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JS判断数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/25/my-new-post/" class="article-date">
-  	<time datetime="2015-08-24T17:53:25.000Z" itemprop="datePublished">2015-08-25</time>
+      <a href="/2014/03/03/JS判断数据类型/" class="article-date">
+  	<time datetime="2014-03-03T11:07:43.000Z" itemprop="datePublished">2014-03-03</time>
 </a>
     </div>
   
@@ -213,7 +213,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/25/my-new-post/">my new post</a>
+      <a class="article-title" href="/2014/03/03/JS判断数据类型/">JS判断数据类型</a>
     </h1>
   
 
@@ -222,477 +222,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#2015年7月25日第一堂课</p>
-<blockquote>
-<p>##JQ简介</p>
-</blockquote>
+        <p>##JS判断数据类型</p>
+<h3 id="判断是否数字类型">判断是否数字类型</h3><p><code>var num = 9;
+typeof num ===&#39;number&#39;</code></p>
+<h3 id="判断是否字符串">判断是否字符串</h3><p><code>var str =&#39;hello world&#39;;
+typeof str ===&#39;string&#39;</code></p>
+<h3 id="判断是否布尔">判断是否布尔</h3><p><code>var flag =true;
+typeof flag ===&#39;boolean&#39;;</code></p>
+<h3 id="判断是否是对象">判断是否是对象</h3><ul>
+<li>是否是函数</li>
+</ul>
+<p><code>function sum(){};
+typeof sum ===&quot;function&quot;</code></p>
 <ul>
-<li><p>####什么是JQ</p>
+<li>是否是数组</li>
+</ul>
+<p><code>var arr=[];
+alert(arr instanceof Array)</code></p>
 <ul>
-<li>JS的升级版，写越少的代码，做越多的事情</li>
+<li>是否是JSON</li>
 </ul>
-</li>
-<li><p>####学习JQ的基础</p>
-<ul>
-<li>HTM CSS Javascript 后台（了解）</li>
-<li></li>
-</ul>
-</li>
-<li>####JQ官网<ul>
-<li><a href="http://jquery.com/" target="_blank" rel="external">http://jquery.com/</a></li>
-<li></li>
-</ul>
-</li>
-<li>####如何使用JQ<ul>
-<li>官网下载Jquery.js文件</li>
-<li>文档中引用</li>
-<li>版本说明</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>##JQ的一些常用方法</p>
-</blockquote>
-<ul>
-<li>$()    选择元素</li>
-<li><p>css()  赋值或者获得元素CSS属性</p>
-<pre><code>原生写法
-<span class="built_in">document</span>.getElementById(<span class="string">"div1"</span>).style.background =<span class="string">'red'</span>;
-<span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>)[<span class="number">0</span>].style.background = <span class="string">'red'</span>;
-<span class="built_in">document</span>.getElementsByClassName(<span class="string">'box'</span>)[<span class="number">0</span>].style.background = <span class="string">'red'</span>;
-
-JQ写法
-$(<span class="string">'#div1'</span>).css(<span class="string">'background'</span>, <span class="string">'red'</span>);
-$(<span class="string">'div'</span>).css(<span class="string">'background'</span>,<span class="string">'red'</span>);
-$(<span class="string">'.box'</span>).css(<span class="string">'background'</span>, <span class="string">'red);</span>
-</code></pre><ul>
-<li>JQ省略原生循环操作</li>
-</ul>
-</li>
-<li><pre><code>ul&gt;
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span>1111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span>1111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span>1111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">li</span>&gt;</span>1111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-</code></pre></li>
-<li><pre><code>原生写法：
-<span class="keyword">var</span> aLi = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);
-<span class="comment">/*
-for(){
-    aLi[i].style...
-}
-*/</span>
-</code></pre></li>
-<li><pre><code><span class="class">JQ</span>写法：
-//<span class="char">$(</span><span class="string">'li'</span>).css(<span class="string">'background'</span>, <span class="string">'red'</span>); //<span class="class">JQ</span>省略原生当中的循环的操作
-jQuery(<span class="string">'li'</span>).css(<span class="string">'background'</span>, <span class="string">'red'</span>); //<span class="char">$ </span>== jQuery 一个大名一个小名
-</code></pre></li>
-</ul>
-<ul>
-<li><p>属性 attr()   值 val()   多元素取值，只取其中第一个 </p>
-<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>取值与赋值的关系<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"div1"</span> <span class="attribute">class</span>=<span class="value">"box"</span> <span class="attribute">miaov</span>=<span class="value">"miaov"</span>&gt;</span>aaaaa<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"123"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"456"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        <span class="comment">//操作属性attr()</span>
-        $(<span class="string">'#div1'</span>).attr(<span class="string">'class'</span>, <span class="string">'box2'</span>); <span class="comment">//用attr改class属性</span>
-        $(<span class="string">'#div1'</span>).attr(<span class="string">'title'</span>, <span class="string">'hello'</span>); <span class="comment">//添加原本没有的属性</span>
-        alert($(<span class="string">'#div1'</span>).attr(<span class="string">'class'</span>)); <span class="comment">//获取属性值</span>
-        alert($(<span class="string">'#div1'</span>).attr(<span class="string">'miaov'</span>)); <span class="comment">//也可以获取自定义的属性</span>
-        <span class="comment">//val()</span>
-        <span class="comment">//alert($('input').val()); //获取</span>
-        <span class="comment">//$('input').val('7777'); //针对多个input的value值进行设置</span>
-        alert($(<span class="string">'input'</span>).val()); <span class="comment">// 针对集合进行获取操作，只获取第一个</span>
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre></li>
-<li><p>text() val() html()区别</p>
-<pre><code><span class="number">1</span>.&lt;<span class="tag">input</span> type=<span class="string">'text'</span> value=<span class="string">'xxx'</span>/&gt; 这个就需要用 <span class="function"><span class="title">val</span><span class="params">()</span></span>。
-<span class="number">2</span>.&lt;span&gt;你好&lt;/span&gt; 这个就用 <span class="function"><span class="title">text</span><span class="params">()</span></span>。
-<span class="number">3</span>.&lt;div&gt;&lt;p&gt;您好！&lt;/p&gt;&lt;/div&gt; 这个就用<span class="function"><span class="title">html</span><span class="params">()</span></span>
-</code></pre></li>
-</ul>
-<blockquote>
-<p>##强大的$()</p>
-</blockquote>
-<ul>
-<li><p>加载</p>
-<ul>
-<li><p>$(function(){});</p>
-<pre><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-    原生写法
-    <span class="built_in">window</span>.onload =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-
-    }
-
-    JQ写法
-    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-
-    })
-
-    JQ写法<span class="number">2</span>
-    $(widnow).load = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-
-    }
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre></li>
-</ul>
-</li>
-<li><p>属性选择</p>
-<ul>
-<li>[=];</li>
-<li>[^=] 以…起始;</li>
-<li>[$=] 以…结束;</li>
-<li>[*=] 包含…的;</li>
-<li>引号的问题；</li>
-</ul>
-</li>
-<li><pre><code><span class="xml"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>加载和通配符选择<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span></span><span class="expression">{
-            //$('<span class="variable">input</span>[<span class="variable">value</span>]')<span class="variable">.css</span>('<span class="variable">background</span>', '<span class="variable">red</span>'); /<span class="end-block">/input</span>有<span class="variable">value</span>属性的才背景变红
-            //$('<span class="variable">input</span>[<span class="variable">value</span>=123]')<span class="variable">.css</span>('<span class="variable">background</span>', '<span class="variable">red</span>'); /<span class="end-block">/value</span>必须等于123的<span class="variable">input</span>才背景变红
-            //$('<span class="variable">input</span>[<span class="variable">value</span>^=123]')<span class="variable">.css</span>('<span class="variable">background</span>', '<span class="variable">red</span>'); /<span class="end-block">/value</span>以123为起始的<span class="variable">input</span>元素
-            //$('<span class="variable">input</span>[<span class="variable">value</span>$=444]')<span class="variable">.css</span>('<span class="variable">background</span>', '<span class="variable">red</span>'); /<span class="end-block">/value</span>以123为结束的<span class="variable">input</span>元素
-            //$('<span class="variable">input</span>[<span class="variable">value</span>*=3]')<span class="variable">.css</span>('<span class="variable">background</span>', '<span class="variable">red</span>'); /<span class="end-block">/value</span>中有3的<span class="variable">input</span>元素
-            $('<span class="variable">div</span>[<span class="variable">class</span>=<span class="string">"box box2"</span>])<span class="variable">.css</span>('<span class="variable">color</span>', '<span class="variable">red</span>'); //这种情况下，<span class="variable">box</span> <span class="variable">box</span>2必须要用引号引起来
-        }</span><span class="xml"><span class="undefined">);
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"div1"</span> <span class="attribute">class</span>=<span class="value">"box box2"</span> <span class="attribute">miaov</span>=<span class="value">"妙味"</span>&gt;</span>aaaaaa<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"123_444"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"123_555"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"777_888"</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span></span>
-</code></pre></li>
-</ul>
-<blockquote>
-<p>##JQ链式操作</p>
-</blockquote>
-<ul>
-<li>$().css().html().click()</li>
-<li>针对设置的时候  （意思是只是赋值，如果是获取不可以链式）</li>
-<li><pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>链式操作<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-            <span class="comment">/*
-            var oDiv = $('#div1');
-            oDiv.html('bbbbb');
-            oDiv.css('color', 'red');
-            oDiv.click(function(){
-                alert(123);
-            });
-            */</span>
-            $(<span class="string">'#div1'</span>).html(<span class="string">'bbbbb'</span>).css(<span class="string">'color'</span>, <span class="string">'red'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{alert(<span class="number">123</span>)});
-        })
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"div1"</span>&gt;</span>aaaaaaa<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>    
-</code></pre></li>
-</ul>
-<blockquote>
-<p>##JQ命名规范</p>
-</blockquote>
-<ul>
-<li>命名的规范  $div $span</li>
-<li><p>容错处理    <strong>JQ容错性很好，即使写错了依然会执行</strong></p>
-<p>   &lt;!DOCTYPE html&gt;</p>
-   <html lang="en"><br>   <head><br>       <meta charset="UTF-8"><br>       <title>容错处理</title><br>       <script src="jquery-1.11.1.js"></script><br>       <script><br>           $(function(){<br>               //var oSpan = document.getElementById(‘span1’);<br>               //oSpan.innerHTML = ‘bbbbb’; //这个oSpan在页面中不存在，原生的js会报错<br>               var $span = $(‘#span1’); //这个span并不存在<br>               $span.html(‘bbbbb’); //但是如果用JQ写就不会报错<br>           })<br>       </script><br>   </head><br>   <body><br>       <div id="div1">aaaaaaa</div><br>   </body><br>   </html>
-
-
-</li>
-</ul>
-<blockquote>
-<p>##JQ集合</p>
-</blockquote>
-<ul>
-<li>集合长度   相当于对数组操作，length不加括号  size()</li>
-<li><p>   &lt;!DOCTYPE html&gt;</p>
-   <html lang="en"><br>   <head><br>       <meta charset="UTF-8"><br>       <title>集合的长度</title><br>       <script src="jquery-1.11.1.js"></script><br>       <script><br>           $(function(){<br>               //alert($(‘div’).size()); //3 用size()获取集合的长度<br>               //alert($(‘div’).length); //3 注意没有括号，获得集合的长度<br>               alert($(‘#div1’).length); //1 用$()获取到的都是元素的集合<br>           })<br>       </script><br>   </head><br>   <body><br>       <div id="div1" class="box box2" miaov="妙味">aaaaaaa</div><br>       <div></div><br>       <div></div><br>   </body><br>   </html>    
-</li>
-<li><p>利用length判断元素是否存在</p>
-<ul>
-<li>如果$(“div”).length = 0 则表示没有此元素</li>
-</ul>
-</li>
-<li>实例：删除指定颜色方块的背景颜色</li>
-<li>   &lt;!DOCTYPE html&gt;   <html lang="en"><br>   <head><br>       <meta charset="UTF-8"><br>       <title>删除指定颜色的方块</title><br>       <style><br>           div { width: 100px; height: 100px; border: 1px solid #000; float: left; margin: 10px; }<br>       </style><br>       <script src="jquery-1.11.1.js"></script><br>   </head><br>   <body><br>       <span>red</span><br>       <span>yellow</span><br>       <span>green</span><br>       <span>blue</span><br>       <br><br>       <input type="button" value="清空红色"><br>       <br><br>       <div></div><br>       <div></div><br>       <div></div><br>       <div></div><br>       <script><br>           var color = ‘’;<br>           $(‘span’).click(function(){<br>               color = $(this).html();<br>           });<br>           $(‘div’).click(function(){<br>               $(this).css(‘background’, color);<br>           });<br>           $(‘input’).click(function(){<br>               $(‘div[style*=red]’).css(‘background’, ‘’);<br>           });<br>       </script><br>   </body><br>   </html>
-
-</li>
-</ul>
-<blockquote>
-<p>##Class的操作</p>
-</blockquote>
-<ul>
-<li>addClass()</li>
-<li>removeClass()</li>
-<li>toggleClass()</li>
-<li><pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>class的操作<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-            $(<span class="string">'#div1'</span>).addClass(<span class="string">'box2 box4'</span>); <span class="comment">//添加多个class，可以用空格隔开；重复的class不会添加进去（JQ自动去重了）</span>
-            $(<span class="string">'#div1'</span>).removeClass(<span class="string">'box2 box4'</span>); <span class="comment">//找到的class会被删掉，没有找到的class被JQ自动忽略了</span>
-            $(<span class="string">'#div1'</span>).toggleClass(<span class="string">'box3'</span>); <span class="comment">//如果没有该class，就自动加上；如果有了，就自动删去</span>
-        })
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"div1"</span> <span class="attribute">class</span>=<span class="value">"box box2"</span> <span class="attribute">miaov</span>=<span class="value">"妙味"</span>&gt;</span>aaaaaa<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span></span>
-</code></pre></li>
-</ul>
-<ul>
-<li>show() / hide() </li>
-<li><pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>class的操作<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-            <span class="keyword">var</span> bBtn = <span class="literal">true</span>;
-            $(<span class="string">'input'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-                <span class="keyword">if</span>(bBtn){
-                    $(<span class="string">'div'</span>).hide();<span class="comment">//比较智能</span>
-                } <span class="keyword">else</span> {
-                    $(<span class="string">'div'</span>).show();
-                }
-                bBtn = !bBtn;
-            });
-        })
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">value</span>=<span class="value">"点击"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span>&gt;</span>div<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre></li>
-</ul>
-<ul>
-<li>toggle相当于调用hide()和show()</li>
-</ul>
-<ul>
-<li><p>show()、hide()方法与css()的区别</p>
-<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>class的操作<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-            <span class="keyword">var</span> bBtn = <span class="literal">true</span>;
-            $(<span class="string">'input'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-                <span class="keyword">if</span>(bBtn){
-                    <span class="comment">//$('div').hide();</span>
-                    $(<span class="string">'span'</span>).css(<span class="string">'display'</span>, <span class="string">'none'</span>);
-                } <span class="keyword">else</span> {
-                    <span class="comment">//$('div').show();</span>
-                    $(<span class="string">'span'</span>).css(<span class="string">'display'</span>, <span class="string">'block'</span>); <span class="comment">//这里会出现问题，面对行内元素，应将block改为inline。但是如果用show()和hide()，则不需要进行这方面的相应更改</span>
-                }
-                bBtn = !bBtn;
-            });
-        })
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">value</span>=<span class="value">"点击"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">br</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">span</span>&gt;</span>span<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">span</span>&gt;</span>span<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">span</span>&gt;</span>span<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre></li>
-</ul>
-<blockquote>
-<p>##节点的选择</p>
-</blockquote>
-<ul>
-<li>prev() next()</li>
-<li>prevAll() nextAll()</li>
-<li><p>siblings()</p>
-</li>
-<li><pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>节点的选择<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-            <span class="comment">//$('span').next().css('background', 'red'); //p, h1</span>
-            <span class="comment">//$('span').prev().css('background', 'red'); //div, p</span>
-            <span class="comment">//$('p').nextAll().css('background', 'red'); //p标签下面的所有标签</span>
-            <span class="comment">//$('p').prevAll().css('background', 'red'); //p标签之前的所有标签</span>
-            <span class="comment">//$('p').siblings().css('background', 'red'); //找p标签所有的兄弟节点</span>
-            <span class="comment">//参数筛选功能(可以有参数)</span>
-            <span class="comment">//$('p').siblings('h2').css('background', 'red'); //找p标签所有的兄弟节点中的h2节点</span>
-            <span class="comment">//$('span').next('h1').css('background', 'red'); </span>
-            <span class="comment">//$('span').next('h2').css('background', 'red'); //两个span的下一个都没有h2的，所以就没有</span>
-        });
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span>&gt;</span>div<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">span</span>&gt;</span>span<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">p</span>&gt;</span>p<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">span</span>&gt;</span>span<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>h1<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">h2</span>&gt;</span>h2<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">h2</span>&gt;</span>h2<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">h3</span>&gt;</span>h3<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">em</span>&gt;</span>em<span class="tag">&lt;/<span class="title">em</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre></li>
-<li><p>例子：利用参数修复查找节点问题/点击弹出菜单</p>
-<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>点击弹出菜单<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
-        <span class="class">.active</span><span class="rules">{<span class="rule"><span class="attribute">background</span>:<span class="value"> red</span></span>;}</span>
-    </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">value</span>=<span class="value">"1"</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-            <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-
-    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">value</span>=<span class="value">"1"</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-
-    $(<span class="string">'input'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-        $(<span class="keyword">this</span>).nextAll(<span class="string">"ul"</span>).toggle();
-    });
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre></li>
-<li><p>eq下标的用法</p>
-<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>点击弹出菜单<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
-    </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-
-    <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-        <span class="tag">&lt;<span class="title">li</span>&gt;</span>111<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
-    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-
-        $(<span class="string">'li'</span>).eq(<span class="number">1</span>).css(<span class="string">'background'</span>,<span class="string">'red'</span>);
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre></li>
-</ul>
-<blockquote>
-<p>##JQ跟JS的区别</p>
-</blockquote>
-<ul>
-<li><p>####例子：<a href="">选择颜色填充方块</a></p>
-<p>   &lt;!DOCTYPE html&gt;</p>
-   <html lang="en"><br>   <head><br>       <meta charset="UTF-8"><br>       <title>选择颜色填充方块</title><br>       <style><br>           div { width: 100px; height: 100px; border: 1px solid #000; float: left; margin: 10px; }<br>       </style><br>       <script src="jquery-1.11.1.js"></script><br>   </head><br>   <body><br>       <span>red</span><br>       <span>yellow</span><br>       <span>green</span><br>       <span>blue</span><br>       <br><br>       <div></div><br>       <div></div><br>       <div></div><br>       <div></div><br>       <script><br>           var color = ‘’;<br>           $(‘span’).click(function(){<br>               color = $(this).html()<br>           });<br>           $(‘div’).click(function(){<br>               $(this).css(‘background’, color);<br>           });<br>       </script><br>   </body><br>   </html>
-
-
-</li>
-</ul>
-<ul>
-<li><p>####之间不能混写</p>
-<p>   var oDiv =$(“#div1”);<br>   oDiv.click = function(){</p>
-<pre><code><span class="comment">//alert(oDiv.html())  //纯JQ写法，没问题</span>
-<span class="comment">//alert(document.getElementById('div1')).innerHTML //纯JS写法 没问题</span>
-<span class="comment">//alert(oDiv.innerHTML) //错误  oDIv是JQ的，innerHTML是JS原生的 不能混写</span>
-<span class="comment">//alert(document.getElementById('div1')).html()); //错误</span>
-<span class="comment">//this？  这个是原生还是JQ  //**函数中返回的this都是原生**</span>
-<span class="function"><span class="title">alert</span><span class="params">(this.innerHTMl)</span></span>  <span class="comment">//正确</span>
-<span class="function"><span class="title">alert</span><span class="params">($(this)</span></span>.<span class="function"><span class="title">html</span><span class="params">()</span></span>)  <span class="comment">//也正确</span>
-<span class="comment">//说明 $(this)可以将原生的this变换为JQ</span>
-</code></pre><p>   }</p>
-</li>
-</ul>
-<blockquote>
-<p>##JQ取值与赋值的关系</p>
-</blockquote>
-<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
-<span class="tag">&lt;<span class="title">head</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">title</span>&gt;</span>取值与赋值的关系<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"jquery-1.11.1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
-<span class="tag">&lt;<span class="title">body</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"div1"</span> <span class="attribute">class</span>=<span class="value">"box"</span>&gt;</span>aaaaa<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
-        <span class="comment">// oDiv = document.getElementById('div1'); //获得元素</span>
-        <span class="comment">// oDiv.innerHTML; //获取</span>
-        <span class="comment">// oDiv.innerHTML = 'bbbbb'; //赋值</span>
-        <span class="comment">//$('#div1').html(); //获取</span>
-        <span class="comment">//$('#div1').html('bbbbbb'); //赋值</span>
-        $(<span class="string">'#div1'</span>).css(<span class="string">'color'</span>, <span class="string">'red'</span>); <span class="comment">//赋值</span>
-        alert($(<span class="string">'#div1'</span>).css(<span class="string">'color'</span>)); <span class="comment">//获取div的color属性的属性值</span>
-    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
-<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
-</code></pre><blockquote>
-<p>##课堂练习</p>
-</blockquote>
+<p><code>obj = {a:1,b:2}
+alert(typeof obj ===&#39;object&#39; &amp;&amp; obj+&#39;&#39; ===&#39;[object Object]&#39;)</code></p>
 
       
     </div>
@@ -700,7 +251,15 @@ jQuery(<span class="string">'li'</span>).css(<span class="string">'background'</
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Study/">Study</a>
+	</div>
+
 
       
       <div class="clearfix"></div>
