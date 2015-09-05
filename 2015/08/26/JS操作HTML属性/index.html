@@ -3,18 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>2015A股 | Just a blog</title>
+  <title>JS操作HTML属性 | Just a blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="15 今年入市的新股民既是倒霉的又是幸运的，把几十年老股民都没遇到过的千股涨停，千股跌停，千股停牌，千股涨停到跌停，千股跌停到涨停全都过了一把瘾，在今年这么变态的市场中还能活下来的人，后面会快速变的成熟，也会有一批人较之前入市的股民提前10年成为大师，逆境中人的成长速度是惊人的！">
+  <meta name="description" content="###属性读写操作的注意事项
+
+JS属性中不允许出现”-“，例如font-size改为fontSize
+class是JS里面的保留字，在JS作用Class要用ClassName
+所有相对路径都别拿来做判断（例如img里的src，href）
+颜色值不要拿来做判断（因为有red #f00 rgb(250,0,0)等不同写法）
+innerHTML的值不要拿来做判断
+IE6 7 8中表单元素的type更改">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2015A股">
-<meta property="og:url" content="http://yoursite.com/2015/08/26/2015A股/index.html">
+<meta property="og:title" content="JS操作HTML属性">
+<meta property="og:url" content="http://yoursite.com/2015/08/26/JS操作HTML属性/index.html">
 <meta property="og:site_name" content="Just a blog">
-<meta property="og:description" content="15 今年入市的新股民既是倒霉的又是幸运的，把几十年老股民都没遇到过的千股涨停，千股跌停，千股停牌，千股涨停到跌停，千股跌停到涨停全都过了一把瘾，在今年这么变态的市场中还能活下来的人，后面会快速变的成熟，也会有一批人较之前入市的股民提前10年成为大师，逆境中人的成长速度是惊人的！">
-<meta property="og:updated_time" content="2015-09-05T06:33:06.000Z">
+<meta property="og:description" content="###属性读写操作的注意事项
+
+JS属性中不允许出现”-“，例如font-size改为fontSize
+class是JS里面的保留字，在JS作用Class要用ClassName
+所有相对路径都别拿来做判断（例如img里的src，href）
+颜色值不要拿来做判断（因为有red #f00 rgb(250,0,0)等不同写法）
+innerHTML的值不要拿来做判断
+IE6 7 8中表单元素的type更改">
+<meta property="og:updated_time" content="2015-09-05T06:37:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2015A股">
-<meta name="twitter:description" content="15 今年入市的新股民既是倒霉的又是幸运的，把几十年老股民都没遇到过的千股涨停，千股跌停，千股停牌，千股涨停到跌停，千股跌停到涨停全都过了一把瘾，在今年这么变态的市场中还能活下来的人，后面会快速变的成熟，也会有一批人较之前入市的股民提前10年成为大师，逆境中人的成长速度是惊人的！">
+<meta name="twitter:title" content="JS操作HTML属性">
+<meta name="twitter:description" content="###属性读写操作的注意事项
+
+JS属性中不允许出现”-“，例如font-size改为fontSize
+class是JS里面的保留字，在JS作用Class要用ClassName
+所有相对路径都别拿来做判断（例如img里的src，href）
+颜色值不要拿来做判断（因为有red #f00 rgb(250,0,0)等不同写法）
+innerHTML的值不要拿来做判断
+IE6 7 8中表单元素的type更改">
   
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
@@ -97,10 +118,10 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-2015A股" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS操作HTML属性" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/26/2015A股/" class="article-date">
+      <a href="/2015/08/26/JS操作HTML属性/" class="article-date">
   	<time datetime="2015-08-26T04:59:28.000Z" itemprop="datePublished">2015-08-26</time>
 </a>
     </div>
@@ -112,7 +133,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      2015A股
+      JS操作HTML属性
     </h1>
   
 
@@ -121,7 +142,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
 	</div>
 
         
@@ -136,7 +157,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>15 今年入市的新股民既是倒霉的又是幸运的，把几十年老股民都没遇到过的千股涨停，千股跌停，千股停牌，千股涨停到跌停，千股跌停到涨停全都过了一把瘾，在今年这么变态的市场中还能活下来的人，后面会快速变的成熟，也会有一批人较之前入市的股民提前10年成为大师，逆境中人的成长速度是惊人的！</p>
+        <p>###属性读写操作的注意事项</p>
+<ul>
+<li>JS属性中不允许出现”-“，例如font-size改为fontSize</li>
+<li>class是JS里面的保留字，在JS作用Class要用ClassName</li>
+<li>所有相对路径都别拿来做判断（例如img里的src，href）</li>
+<li>颜色值不要拿来做判断（因为有red #f00 rgb(250,0,0)等不同写法）</li>
+<li>innerHTML的值不要拿来做判断</li>
+<li>IE6 7 8中表单元素的type更改不了，不支持，会报错</li>
+<li>在有些浏览器中，直接更改Float值可能不支持。在JS里，可以用IE(styleFloat)和非IE（cssfloat）来区别对待</li>
+<li>不能做判断的东西，可以创造一个开关，利用布尔值来实现</li>
+</ul>
 
       
     </div>
@@ -146,9 +177,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2015/08/26/2015A股/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          2015A股
+        
+      </div>
+    </a>
   
-    <a href="/2015/08/26/JS操作HTML属性/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS操作HTML属性</div>
+  
+    <a href="/2014/10/26/ECMAScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ECMAScript</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
