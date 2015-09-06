@@ -179,8 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###属性读写操作的注意事项</p>
-<ul>
+        <h3 id="属性读写操作的注意事项">属性读写操作的注意事项</h3><ul>
 <li>JS属性中不允许出现”-“，例如font-size改为fontSize</li>
 <li>class是JS里面的保留字，在JS作用Class要用ClassName</li>
 <li>所有相对路径都别拿来做判断（例如img里的src，href）</li>
@@ -249,20 +248,18 @@
         <h2 id="JS的基础知识ECMAScript">JS的基础知识ECMAScript</h2><h3 id="JS引入方式">JS引入方式</h3><ul>
 <li>内部引用</li>
 </ul>
-<p>`</p>
-<p><script>alert(1)</script><br>`</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="undefined">alert(1)</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>外部引用</li>
 </ul>
-<p>`</p>
-<p><script src=""></script><br>`</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">""</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="JS语法">JS语法</h3><ul>
 <li>定义变量</li>
 <li>语句以分号结尾</li>
 <li>变量名以￥、字母、_开头，其他字符可以是数字，区分大小写</li>
 <li>注释方式  </li>
 </ul>
-<p><code>/*这是注释*/</code></p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span>这是注释<span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
 <h3 id="基本调试">基本调试</h3><ul>
 <li>审查元素，打开控制台</li>
 <li>console.log();</li>
@@ -303,19 +300,13 @@
 <li>if语句</li>
 <li>for语句</li>
 <li>do-while语句</li>
-<li><pre><code>var i = <span class="number">0</span>;
-<span class="keyword">do</span>{
-    i += <span class="number">2</span>;
-}<span class="keyword">while</span>(i &lt; <span class="number">10</span>);
-console.<span class="built_in">log</span>(i);
-</code></pre></li>
-<li><p>while</p>
-<pre><code>var i = <span class="number">0</span>;
-<span class="keyword">while</span> (i &lt; <span class="number">10</span>) {
-    i += <span class="number">2</span>;
-    console.<span class="built_in">log</span>(i);
-}
-</code></pre></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var i = <span class="number">0</span>; </span><br><span class="line"><span class="keyword">do</span>&#123; </span><br><span class="line">    i += <span class="number">2</span>; </span><br><span class="line">&#125;<span class="keyword">while</span>(i &lt; <span class="number">10</span>); </span><br><span class="line">console.<span class="built_in">log</span>(i);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>while</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var i = <span class="number">0</span>; </span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">10</span>) &#123; </span><br><span class="line">    i += <span class="number">2</span>; </span><br><span class="line">    console.<span class="built_in">log</span>(i); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
 <li><p>for-in语句 </p>
 <blockquote>
 <p>用于循环输出对象里的值，例如Json</p>
@@ -330,19 +321,11 @@ console.<span class="built_in">log</span>(i);
 <blockquote>
 <p>判断语句，if else的简化版</p>
 </blockquote>
-<pre><code><span class="keyword">switch</span>(<span class="literal">true</span>){
-    <span class="keyword">case</span> score &gt;= <span class="number">90</span>:
-        console.<span class="built_in">log</span>(<span class="string">'优'</span>);
-        <span class="keyword">break</span>;
-    <span class="keyword">case</span> score &gt;= <span class="number">70</span>:
-        console.<span class="built_in">log</span>(<span class="string">'良'</span>);
-        <span class="keyword">break</span>;
-    <span class="keyword">default</span>:
-        console.<span class="built_in">log</span>(<span class="string">'差'</span>);
-}
-</code></pre></li>
-<li><p>函数</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(<span class="literal">true</span>)&#123; </span><br><span class="line">    <span class="keyword">case</span> score &gt;= <span class="number">90</span>: </span><br><span class="line">        console.<span class="built_in">log</span>(<span class="string">'优'</span>); </span><br><span class="line">        <span class="keyword">break</span>; </span><br><span class="line">    <span class="keyword">case</span> score &gt;= <span class="number">70</span>: </span><br><span class="line">        console.<span class="built_in">log</span>(<span class="string">'良'</span>); </span><br><span class="line">        <span class="keyword">break</span>; </span><br><span class="line">    <span class="keyword">default</span>: </span><br><span class="line">        console.<span class="built_in">log</span>(<span class="string">'差'</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
+<li>函数<ul>
 <li>定义方式</li>
 <li>带参数的函数</li>
 <li>函数的调用</li>
@@ -358,102 +341,43 @@ console.<span class="built_in">log</span>(i);
 </ul>
 <p>几个例子</p>
 <ul>
-<li>例子1  弹出 function(){alert(1)}</li>
-<li><pre><code>alert fn1<span class="params">()</span>;
-<span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span>{</span>
-    return <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
-        alert<span class="params">(<span class="number">1</span>)</span>;
-    }
-}
-</code></pre></li>
-<li><p>例子2  弹出 1；</p>
-<pre><code>alert fn1<span class="params">()</span><span class="params">()</span>;
-<span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span>{</span>
-    return <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
-        alert<span class="params">(<span class="number">1</span>)</span>;
-    }
-}
-</code></pre></li>
+<li><p>例子1  弹出 function(){alert(1)}</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">alert fn1<span class="params">()</span>; </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span>&#123;</span> </span><br><span class="line">    return <span class="function"><span class="keyword">function</span><span class="params">()</span>&#123;</span> </span><br><span class="line">        alert<span class="params">(<span class="number">1</span>)</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>例子2  弹出 1； </p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">alert fn1<span class="params">()</span><span class="params">()</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span>&#123;</span></span><br><span class="line">    return <span class="function"><span class="keyword">function</span><span class="params">()</span>&#123;</span></span><br><span class="line">        alert<span class="params">(<span class="number">1</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>例子3 弹出10</p>
-<pre><code>alert fn1<span class="params">()</span><span class="params">(<span class="number">10</span>)</span>;
-<span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span>{</span>
-    return <span class="function"><span class="keyword">function</span><span class="params">(a)</span>{</span>
-        alert<span class="params">(a)</span>;
-    }
-}
-</code></pre></li>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">alert fn1<span class="params">()</span><span class="params">(<span class="number">10</span>)</span>; </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">()</span>&#123;</span> </span><br><span class="line">    return <span class="function"><span class="keyword">function</span><span class="params">(a)</span>&#123;</span> </span><br><span class="line">        alert<span class="params">(a)</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>例子4 弹出30</p>
-<pre><code>alert fn1<span class="params">(<span class="number">20</span>)</span><span class="params">(<span class="number">10</span>)</span>;
-<span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">(a)</span>{</span>
-    return <span class="function"><span class="keyword">function</span><span class="params">(b)</span>{</span>
-        alert<span class="params">(a + b)</span>;
-    }
-}
-</code></pre></li>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">alert fn1<span class="params">(<span class="number">20</span>)</span><span class="params">(<span class="number">10</span>)</span>; </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span><span class="params">(a)</span>&#123;</span> </span><br><span class="line">    return <span class="function"><span class="keyword">function</span><span class="params">(b)</span>&#123;</span> </span><br><span class="line">        alert<span class="params">(a + b)</span>; </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="理解函数传参">理解函数传参</h3><blockquote>
 <p>函数的参数是放在 argument里面，可以看做arguments是参数的载体</p>
 </blockquote>
-<pre><code><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params"></span>)</span>{
-    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);
-}
-sum(<span class="number">1</span>);
-sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);
-
-<span class="comment">/* js中的函数无传统意义的重载 */</span>
-<span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b</span>)</span>{
-    <span class="keyword">return</span> a + b;
-}
-<span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a, b, c</span>)</span>{
-    <span class="keyword">return</span> a + b + c;
-}
-sum(<span class="number">1</span>, <span class="number">2</span>); <span class="comment">//出错</span>
-sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);
-
-<span class="comment">/*用arguemnts实现重载*/</span>
-<span class="function"><span class="keyword">function</span> <span class="title">newSum</span>(<span class="params"></span>)</span>{
-    <span class="keyword">var</span> sum = <span class="number">0</span>;
-    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++){
-        sum += <span class="built_in">arguments</span>[i];
-    }
-    <span class="keyword">return</span> sum;
-}
-</code></pre><blockquote>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>()&#123; </span></span><br><span class="line">    console.<span class="built_in">log</span>(arguments); </span><br><span class="line">&#125;; </span><br><span class="line"><span class="built_in">sum</span>(<span class="number">1</span>); </span><br><span class="line"><span class="built_in">sum</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); </span><br><span class="line"><span class="comment">/*js中的函数无传统意义的重载*/</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="title">a</span>, <span class="title">b</span>)&#123; </span></span><br><span class="line">    <span class="constant">return</span> <span class="operator">a</span> + b; </span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="title">a</span>, <span class="title">b</span>, <span class="title">c</span>)&#123; </span></span><br><span class="line">    <span class="constant">return</span> <span class="operator">a</span> + b + c; </span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">sum</span>(<span class="number">1</span>, <span class="number">2</span>);<span class="comment"> //出错 </span></span><br><span class="line"><span class="built_in">sum</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); </span><br><span class="line"><span class="comment">/*用arguemnts实现重载*/</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">newSum</span>()&#123;  </span></span><br><span class="line">    var <span class="built_in">sum</span> = <span class="number">0</span>; </span><br><span class="line">    <span class="keyword">for</span>(var i = <span class="number">0</span>; i&lt; arguments.<span class="built_in">length</span>; i++)&#123; </span><br><span class="line">        <span class="built_in">sum</span> += arguments[i]; </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="constant">return</span> <span class="built_in">sum</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>函数重载： 几个相同函数名+不同函数参数 = 可以实现不同功能<br>JS不支持函数重载，后定义的函数会把之前的同名的函数覆盖</p>
 </blockquote>
 <h3 id="运算符">运算符</h3><ul>
 <li><p>递增递减  – ++ </p>
-<pre><code><span class="variable"><span class="keyword">var</span> a</span> = <span class="number">10</span>;
-<span class="variable"><span class="keyword">var</span> c</span> = ++a;    <span class="comment">//a自己加1，再赋值给c</span>
-<span class="variable"><span class="keyword">var</span> d</span> = a++;    <span class="comment">// a赋值给d, 再自己加1，</span>
-<span class="variable"><span class="keyword">var</span> b</span> = 'hello';    
-b += 'kevin';  <span class="comment">// b = b + 'kevin'; b的值是hello kevin</span>
-</code></pre></li>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> a</span> = <span class="number">10</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> c</span> = ++a;    <span class="comment">//a自己加1，再赋值给c</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> d</span> = a++;    <span class="comment">// a赋值给d, 再自己加1，</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> b</span> = 'hello';    </span><br><span class="line">b += 'kevin';  <span class="comment">// b = b + 'kevin'; b的值是hello kevin</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>非与或 ！ &amp;&amp; ||</p>
 </li>
 <li>乘法* 除法/ 求余%<ul>
 <li>对于乘除减 非number先转化为number，如果转化失败，则返回NaN</li>
 </ul>
 </li>
-<li><p>加法 + </p>
-<ul>
+<li>加法 + <ul>
 <li>对于加，任何与字符串相加会转化成字符串</li>
 </ul>
 </li>
-<li><pre><code>var a = <span class="number">10</span>,
-    b = <span class="string">"2"</span>,
-    c = <span class="literal">true</span>,
-    d = <span class="literal">false</span>,
-    e = null,
-    f = 'hello';
-console.<span class="built_in">log</span><span class="params">( a + a )</span>;  <span class="comment">//20</span>
-console.<span class="built_in">log</span><span class="params">( a + b )</span>;  <span class="comment">//102</span>
-console.<span class="built_in">log</span><span class="params">( a + c )</span>;  <span class="comment">//11</span>
-console.<span class="built_in">log</span><span class="params">( d + c )</span>;  <span class="comment">//1</span>
-console.<span class="built_in">log</span><span class="params">( e + f )</span>;  <span class="comment">//nullhello</span>
-console.<span class="built_in">log</span><span class="params">( a + f )</span>;  <span class="comment">//10hello</span>
-console.<span class="built_in">log</span><span class="params">( f + <span class="params">(a + a)</span> )</span>;  <span class="comment">//hello20</span>
-</code></pre></li>
+</ul>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var a = <span class="number">10</span>,</span><br><span class="line">    b = <span class="string">"2"</span>,</span><br><span class="line">    c = <span class="literal">true</span>,</span><br><span class="line">    d = <span class="literal">false</span>,</span><br><span class="line">    e = null,</span><br><span class="line">    f = 'hello';</span><br><span class="line">console.<span class="built_in">log</span><span class="params">( a + a )</span>;  <span class="comment">//20</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">( a + b )</span>;  <span class="comment">//102</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">( a + c )</span>;  <span class="comment">//11</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">( d + c )</span>;  <span class="comment">//1</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">( e + f )</span>;  <span class="comment">//nullhello</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">( a + f )</span>;  <span class="comment">//10hello</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">( f + <span class="params">(a + a)</span> )</span>;  <span class="comment">//hello20</span></span><br></pre></td></tr></table></figure>
+<ul>
 <li><p>关系&gt;&lt;</p>
 <ul>
 <li>number 直接比较</li>
@@ -472,55 +396,18 @@ console.<span class="built_in">log</span><span class="params">( f + <span class=
 <li>Number</li>
 </ul>
 </li>
-<li><pre><code>console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="string">"100"</span>)</span>)</span> <span class="comment">//100</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="string">""</span>)</span>)</span> <span class="comment">//0</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="literal">false</span>)</span>)</span> <span class="comment">//0</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="string">"   "</span>)</span>)</span> <span class="comment">//0</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">([<span class="number">123</span>])</span>)</span> <span class="comment">//123</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">(null)</span>)</span> <span class="comment">//0</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="literal">undef</span>ined)</span>)</span> <span class="comment">//NaN</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">({})</span>)</span> <span class="comment">//NaN</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">(function<span class="params">()</span>{})</span>)</span> <span class="comment">//NaN</span>
-console.<span class="built_in">log</span><span class="params">(Number<span class="params">('<span class="number">100</span>px')</span>)</span> <span class="comment">//NaN</span>
-</code></pre><ul>
-<li>parseInt和parseFloat  一个只能转出整数部分，一个能转出小数部分</li>
 </ul>
-</li>
-<li><pre><code><span class="keyword">var</span> a = <span class="string">'100px'</span>;
-alert(<span class="built_in">parseInt</span>(a)); <span class="comment">//100</span>
-
-<span class="keyword">var</span> b = <span class="string">'100px123456789'</span>;
-alert(<span class="built_in">parseInt</span>(b)); <span class="comment">//100</span>
-
-<span class="keyword">var</span> d = <span class="string">'-100px'</span>;
-alert(<span class="built_in">parseInt</span>(d)); <span class="comment">//-100 parseInt还是认加减号的</span>
-
-<span class="keyword">var</span> e = <span class="string">'   100px'</span>;
-alert(<span class="built_in">parseInt</span>(e)); <span class="comment">//100 parseInt也是认空格的</span>
-
-<span class="keyword">var</span> f = <span class="string">'000000100px'</span>;
-alert(<span class="built_in">parseInt</span>(f)); <span class="comment">//100</span>
-
-<span class="keyword">var</span> g = <span class="string">'12.34元'</span>;
-alert(<span class="built_in">parseInt</span>(g)); <span class="comment">//12 parseInt只能转出整数</span>
-------------------------------
-<span class="keyword">var</span> c = <span class="literal">true</span>;
-alert(<span class="built_in">parseInt</span>(c)); <span class="comment">//NaN</span>
-
-<span class="comment">//parseInt也不能用于转函数等</span>
-</code></pre><ul>
-<li>parseInt和parseFloat配合使用，来判断是整数还是小数</li>
-</ul>
-</li>
-<li><pre><code><span class="keyword">var</span> <span class="built_in">num</span> = <span class="string">'200.345'</span>;
-<span class="keyword">if</span>(parseInt(<span class="built_in">num</span>) == parseFloat(<span class="built_in">num</span>)) {
-  alert(<span class="built_in">num</span> + <span class="string">'是整数'</span>);
-} <span class="keyword">else</span> {
-  alert(<span class="built_in">num</span> + <span class="string">'是小数'</span>);
-}
-</code></pre></li>
-<li><p>隐形类型转化</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="string">"100"</span>)</span>)</span> <span class="comment">//100 </span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="string">""</span>)</span>)</span> <span class="comment">//0 </span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="literal">false</span>)</span>)</span> <span class="comment">//0 </span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="string">"   "</span>)</span>)</span> <span class="comment">//0 </span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">([<span class="number">123</span>])</span>)</span> <span class="comment">//123</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">(null)</span>)</span> <span class="comment">//0</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">(<span class="literal">undef</span>ined)</span>)</span> <span class="comment">//NaN</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">(&#123;&#125;)</span>)</span> <span class="comment">//NaN</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">(function<span class="params">()</span>&#123;&#125;)</span>)</span> <span class="comment">//NaN</span></span><br><span class="line">console.<span class="built_in">log</span><span class="params">(Number<span class="params">('<span class="number">100</span>px')</span>)</span> <span class="comment">//NaN</span></span><br></pre></td></tr></table></figure>
 <ul>
+<li>parseInt和parseFloat  一个只能转出整数部分，一个能转出小数部分</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'100px'</span>;</span><br><span class="line">alert(<span class="built_in">parseInt</span>(a)); <span class="comment">//100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = <span class="string">'100px123456789'</span>;</span><br><span class="line">alert(<span class="built_in">parseInt</span>(b)); <span class="comment">//100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> d = <span class="string">'-100px'</span>;</span><br><span class="line">alert(<span class="built_in">parseInt</span>(d)); <span class="comment">//-100 parseInt还是认加减号的</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> e = <span class="string">'   100px'</span>;</span><br><span class="line">alert(<span class="built_in">parseInt</span>(e)); <span class="comment">//100 parseInt也是认空格的</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f = <span class="string">'000000100px'</span>;</span><br><span class="line">alert(<span class="built_in">parseInt</span>(f)); <span class="comment">//100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> g = <span class="string">'12.34元'</span>;</span><br><span class="line">alert(<span class="built_in">parseInt</span>(g)); <span class="comment">//12 parseInt只能转出整数</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="literal">true</span>;</span><br><span class="line">alert(<span class="built_in">parseInt</span>(c)); <span class="comment">//NaN</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//parseInt也不能用于转函数等</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>parseInt和parseFloat配合使用，来判断是整数还是小数</p>
+</li>
+</ul>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">num</span> = <span class="string">'200.345'</span>;</span><br><span class="line"><span class="keyword">if</span>(parseInt(<span class="built_in">num</span>) == parseFloat(<span class="built_in">num</span>)) &#123;</span><br><span class="line">  alert(<span class="built_in">num</span> + <span class="string">'是整数'</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  alert(<span class="built_in">num</span> + <span class="string">'是小数'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>隐形类型转化<ul>
 <li>-*/%可以将字符串转化为数字</li>
 <li>+号可以将数字转换为字符串</li>
 <li>++ –可以将字符串转化为数字</li>
@@ -533,22 +420,14 @@ alert(<span class="built_in">parseInt</span>(c)); <span class="comment">//NaN</s
 <h3 id="字符串操作">字符串操作</h3><ul>
 <li>长度.length</li>
 <li><p>截取  subStr/subString/slice</p>
-<pre><code><span class="variable"><span class="keyword">var</span> str</span> = <span class="string">"hello world"</span>;
-<span class="variable"><span class="keyword">var</span> sub1</span> = str.subStr(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// 第一个是开始位置， 第二个是长度  ell</span>
-<span class="variable"><span class="keyword">var</span> sub2</span> = str.subString(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// 第一个是开始位置，第二个是结束位置，长度为第二个－第一个  el</span>
-<span class="variable"><span class="keyword">var</span> sub3</span> = str.slice(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// 同上 允许负参</span>
-</code></pre></li>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> str</span> = <span class="string">"hello world"</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> sub1</span> = str.subStr(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// 第一个是开始位置， 第二个是长度  ell</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> sub2</span> = str.subString(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// 第一个是开始位置，第二个是结束位置，长度为第二个－第一个  el</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> sub3</span> = str.slice(<span class="number">1</span>, <span class="number">3</span>); <span class="comment">// 同上 允许负参</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>查找 search/replace/match</p>
-<pre><code><span class="built_in">var</span> str = <span class="string">"hello my world"</span>;
-<span class="built_in">var</span> s1 = str<span class="built_in">.</span>search(<span class="string">'my'</span>);   <span class="comment">//6 找不到为-1</span>
-<span class="built_in">var</span> s2 = str<span class="built_in">.</span>replace(<span class="string">'my'</span>, <span class="string">'your'</span>); <span class="comment">//</span>
-<span class="built_in">var</span> s3 = str<span class="built_in">.</span><span class="keyword">match</span>(<span class="string">'my'</span>); <span class="comment">//返回匹配的数组</span>
-</code></pre></li>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> str = <span class="string">"hello my world"</span>;</span><br><span class="line"><span class="built_in">var</span> s1 = str<span class="built_in">.</span>search(<span class="string">'my'</span>);   <span class="comment">//6 找不到为-1</span></span><br><span class="line"><span class="built_in">var</span> s2 = str<span class="built_in">.</span>replace(<span class="string">'my'</span>, <span class="string">'your'</span>); <span class="comment">//</span></span><br><span class="line"><span class="built_in">var</span> s3 = str<span class="built_in">.</span><span class="keyword">match</span>(<span class="string">'my'</span>); <span class="comment">//返回匹配的数组</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>大小写 toLowerCase()/toUpperCase()</p>
-<pre><code>var <span class="built_in">str</span> = <span class="string">"Hello"</span>;
-<span class="built_in">str</span>.toUpperCase<span class="params">()</span>;
-<span class="built_in">str</span>.toLowerCase<span class="params">()</span>;
-</code></pre></li>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var <span class="built_in">str</span> = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="built_in">str</span>.toUpperCase<span class="params">()</span>;</span><br><span class="line"><span class="built_in">str</span>.toLowerCase<span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>找到某个字符第一次出现的位置，返回asc码 charAt()/charCodeAt()</p>
 </li>
 </ul>
@@ -685,18 +564,18 @@ alert(<span class="built_in">parseInt</span>(c)); <span class="comment">//NaN</s
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="判断是否数字类型">判断是否数字类型</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">num</span> = <span class="number">9</span>;</span><br><span class="line">typeof <span class="built_in">num</span> ===<span class="string">'number'</span></span><br></pre></td></tr></table></figure>
-<h3 id="判断是否字符串">判断是否字符串</h3><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">str</span> =<span class="string">'hello</span> world';</span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">str</span> ===<span class="string">'string</span>'</span><br></pre></td></tr></table></figure>
-<h3 id="判断是否布尔">判断是否布尔</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flag =<span class="literal">true</span>;</span><br><span class="line"><span class="keyword">typeof</span> flag ===<span class="string">'boolean'</span>;</span><br></pre></td></tr></table></figure>
+        <h3 id="判断是否数字类型">判断是否数字类型</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">num</span> = <span class="number">9</span>; </span><br><span class="line">typeof <span class="built_in">num</span> ===<span class="string">'number'</span></span><br></pre></td></tr></table></figure>
+<h3 id="判断是否字符串">判断是否字符串</h3><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">str</span> =<span class="string">'hello</span> world'; </span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">str</span> ===<span class="string">'string</span>'</span><br></pre></td></tr></table></figure>
+<h3 id="判断是否布尔">判断是否布尔</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flag =<span class="literal">true</span>; </span><br><span class="line"><span class="keyword">typeof</span> flag ===<span class="string">'boolean'</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="判断是否是对象">判断是否是对象</h3><ul>
 <li><p>是否是函数</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line"><span class="keyword">typeof</span> sum ===<span class="string">"function"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span><span class="params">()</span></span>&#123;&#125;; </span><br><span class="line"><span class="keyword">typeof</span> sum ===<span class="string">"function"</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>是否是数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[];</span><br><span class="line">alert(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[]; </span><br><span class="line">alert(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>是否是JSON</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">obj = &#123;<span class="string">a:</span><span class="number">1</span>,<span class="string">b:</span><span class="number">2</span>&#125;</span><br><span class="line">alert(typeof obj ===<span class="string">'object'</span> &amp;&amp; obj+<span class="string">''</span> ===<span class="string">'[object Object]'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">obj = &#123;<span class="string">a:</span><span class="number">1</span>,<span class="string">b:</span><span class="number">2</span>&#125; </span><br><span class="line">alert(typeof obj ===<span class="string">'object'</span> &amp;&amp; obj+<span class="string">''</span> ===<span class="string">'[object Object]'</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
